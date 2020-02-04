@@ -30,7 +30,7 @@ With the information from the message we get when we try to upload a file with t
 -- https://soroush.secproject.com/blog/tag/unrestricted-file-upload/
 -- https://github.com/tennc/webshell/blob/master/fuzzdb-webshell/asp/cmd.asp
 
-By uploading the [web.config](/Write-ups/Bounty/web.config) file, we get the pleasant message **'File uploaded successfully.'**. 
+By uploading the [web.config](/Bounty/web.config) file, we get the pleasant message **'File uploaded successfully.'**. 
 Next we go to **'uploadedfiles/web.config'** where we should get a field to execute system commands, along with some system information.
 
 **Careful**! We have changed a line in the previous script so we get into a word-writable Windows directory, otherwise we wouldn't have access.

