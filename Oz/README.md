@@ -24,7 +24,7 @@ $ nmap -A -v 10.10.10.96
 |_http-trane-info: Problem with XML parsing of /evox/about
 ```
 
-If we open it through a browser and try to bust directories, we eventually see that the server is set up to respond randomly in different requests. If we pay attention to responses, we realize that they return a single line. So if we only hide responses that return a single line we might get something.
+If we open it through a browser and try to find directories, we eventually see that the server is set up to respond randomly in different requests. If we pay attention to responses, we realize that they return a single line. So if we only hide responses that return a single line we might get something.
 ```sh
 $ wfuzz -c -z file,/usr/share/dirb/wordlists/common.txt --hl 0 http://10.10.10.96/FUZZ
 
