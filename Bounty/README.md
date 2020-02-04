@@ -24,7 +24,7 @@ $ dirb http://10.10.10.93/ -X .aspx
 
 Running the above command we find the **'transfer.aspx'** file, where we can upload files. 
 However uploading an **.aspx** reverse shell doesn't seem to work. By viewing page source code, we can see that a function named **'ValidateFile()'** is called and it is blacklisting file extensions. So we have to find the right extension to exploit this. 
-With the information from the message we get when we try to upload a file with the wrong extension and a little google search, we come up with [this](/Write-ups/Bounty/web.config) structure of file.
+With the information from the message we get when we try to upload a file with the wrong extension and a little google search, we come up with [this](/Bounty/web.config) structure of file.
 
 - sources: 
 -- https://soroush.secproject.com/blog/tag/unrestricted-file-upload/
